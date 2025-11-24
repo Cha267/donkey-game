@@ -144,7 +144,7 @@ io.on('connection', (socket) => {
         let player = game.players.find(p => p.id === playerId);
         
         if (!player) {
-            if (game.players.length >= 8) {
+            if (game.players.length >= 20) {
                 socket.emit('error', { message: 'Game is full (max 8 players)' });
                 return;
             }
