@@ -145,7 +145,7 @@ io.on('connection', (socket) => {
         
         if (!player) {
             if (game.players.length >= 20) {
-                socket.emit('error', { message: 'Game is full (max 8 players)' });
+                socket.emit('error', { message: 'Game is full (max 20 players)' });
                 return;
             }
             
